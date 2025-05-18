@@ -1,0 +1,841 @@
+2025-05-16 23:34:22.690 | INFO  | nd-preinit | nternal.util.Version:21    | HV000001: Hibernate Validator 8.0.2.Final
+2025-05-16 23:34:22.714 | INFO  |       main | ot.StartupInfoLogger:50    | Starting InjeApiGatewayApplication using Java 17.0.15 with PID 20810 (/Users/nhninje/nhninjeinc/inje-msa-demo/gateway-server/build/classes/java/main started by nhninje in /Users/nhninje/nhninjeinc/inje-msa-demo/gateway-server)
+2025-05-16 23:34:22.714 | DEBUG |       main | ot.StartupInfoLogger:51    | Running with Spring Boot v3.3.10, Spring v6.1.18
+2025-05-16 23:34:22.714 | INFO  |       main | ot.SpringApplication:654   | No active profile set, falling back to 1 default profile: "default"
+2025-05-16 23:34:23.218 | INFO  |       main | t.scope.GenericScope:282   | BeanFactory id=66eef05d-fb33-39c0-91af-781e0128511c
+2025-05-16 23:34:23.626 | INFO  |       main | finitionRouteLocator:89    | Loaded RoutePredicateFactory [After]
+2025-05-16 23:34:23.626 | INFO  |       main | finitionRouteLocator:89    | Loaded RoutePredicateFactory [Before]
+2025-05-16 23:34:23.626 | INFO  |       main | finitionRouteLocator:89    | Loaded RoutePredicateFactory [Between]
+2025-05-16 23:34:23.626 | INFO  |       main | finitionRouteLocator:89    | Loaded RoutePredicateFactory [Cookie]
+2025-05-16 23:34:23.626 | INFO  |       main | finitionRouteLocator:89    | Loaded RoutePredicateFactory [Header]
+2025-05-16 23:34:23.626 | INFO  |       main | finitionRouteLocator:89    | Loaded RoutePredicateFactory [Host]
+2025-05-16 23:34:23.626 | INFO  |       main | finitionRouteLocator:89    | Loaded RoutePredicateFactory [Method]
+2025-05-16 23:34:23.626 | INFO  |       main | finitionRouteLocator:89    | Loaded RoutePredicateFactory [Path]
+2025-05-16 23:34:23.626 | INFO  |       main | finitionRouteLocator:89    | Loaded RoutePredicateFactory [Query]
+2025-05-16 23:34:23.626 | INFO  |       main | finitionRouteLocator:89    | Loaded RoutePredicateFactory [ReadBody]
+2025-05-16 23:34:23.626 | INFO  |       main | finitionRouteLocator:89    | Loaded RoutePredicateFactory [RemoteAddr]
+2025-05-16 23:34:23.626 | INFO  |       main | finitionRouteLocator:89    | Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2025-05-16 23:34:23.627 | INFO  |       main | finitionRouteLocator:89    | Loaded RoutePredicateFactory [Weight]
+2025-05-16 23:34:23.627 | INFO  |       main | finitionRouteLocator:89    | Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2025-05-16 23:34:23.751 | INFO  |       main | ndpointLinksResolver:60    | Exposing 17 endpoints beneath base path '/actuator'
+2025-05-16 23:34:23.864 | INFO  |       main | nalArgsConfiguration:80    | Eureka HTTP Client uses RestTemplate.
+2025-05-16 23:34:23.874 | WARN  |       main | erCaffeineWarnLogger:94    | Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-16 23:34:23.910 | INFO  |       main | .InstanceInfoFactory:72    | Setting initial instance status as: STARTING
+2025-05-16 23:34:23.919 | INFO  |       main | very.DiscoveryClient:329   | Initializing Eureka in region us-east-1
+2025-05-16 23:34:23.921 | INFO  |       main | onfigClusterResolver:43    | Resolving eureka endpoints via configuration
+2025-05-16 23:34:23.924 | INFO  |       main | very.DiscoveryClient:954   | Disable delta property : false
+2025-05-16 23:34:23.924 | INFO  |       main | very.DiscoveryClient:955   | Single vip registry refresh property : null
+2025-05-16 23:34:23.924 | INFO  |       main | very.DiscoveryClient:956   | Force full registry fetch : false
+2025-05-16 23:34:23.924 | INFO  |       main | very.DiscoveryClient:957   | Application is null : false
+2025-05-16 23:34:23.924 | INFO  |       main | very.DiscoveryClient:958   | Registered Applications size is zero : true
+2025-05-16 23:34:23.925 | INFO  |       main | very.DiscoveryClient:960   | Application version is -1: true
+2025-05-16 23:34:23.925 | INFO  |       main | very.DiscoveryClient:1042  | Getting all instance registry info from the eureka server
+2025-05-16 23:34:24.152 | WARN  |       main | ableEurekaHttpClient:128   | Request execution failure with status code 404; retrying on another server if available
+2025-05-16 23:34:24.154 | INFO  |       main | very.DiscoveryClient:968   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:410)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:245)
+	at com.netflix.discovery.DiscoveryClient.<init>(DiscoveryClient.java:240)
+	at org.springframework.cloud.netflix.eureka.CloudEurekaClient.<init>(CloudEurekaClient.java:68)
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$RefreshableEurekaClientConfiguration.eurekaClient(EurekaClientAutoConfiguration.java:324)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$1(AbstractBeanFactory.java:376)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.getBean(GenericScope.java:375)
+	at org.springframework.cloud.context.scope.GenericScope.get(GenericScope.java:179)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.aop.target.SimpleBeanTargetSource.getTarget(SimpleBeanTargetSource.java:35)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getTargetObject(EurekaRegistration.java:128)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration.getEurekaClient(EurekaRegistration.java:116)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281)
+	at org.springframework.cloud.context.scope.GenericScope$LockedScopedProxyFactoryBean.invoke(GenericScope.java:482)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaRegistration$$SpringCGLIB$$0.getEurekaClient(<generated>)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.maybeInitializeClient(EurekaServiceRegistry.java:83)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry.register(EurekaServiceRegistry.java:66)
+	at org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration.start(EurekaAutoServiceRegistration.java:89)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:285)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:472)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:257)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:202)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:990)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:628)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.inje.apigateway.InjeApiGatewayApplication.main(InjeApiGatewayApplication.java:12)
+
+2025-05-16 23:34:24.155 | INFO  |       main | very.DiscoveryClient:412   | Initial registry fetch from primary servers failed
+2025-05-16 23:34:24.155 | WARN  |       main | ry.DiscoveryClient$1:266   | Using default backup registry implementation which does not do anything.
+2025-05-16 23:34:24.155 | INFO  |       main | very.DiscoveryClient:417   | Initial registry fetch from backup servers failed
+2025-05-16 23:34:24.155 | INFO  |       main | very.DiscoveryClient:1266  | Starting heartbeat executor: renew interval is: 30
+2025-05-16 23:34:24.156 | INFO  |       main | stanceInfoReplicator:64    | InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-16 23:34:24.157 | INFO  |       main | very.DiscoveryClient:455   | Discovery Client initialized at timestamp 1747406064156 with initial instances count: 0
+2025-05-16 23:34:24.158 | INFO  |       main | urekaServiceRegistry:70    | Registering application INJE-API-GATEWAY with eureka with status UP
+2025-05-16 23:34:24.159 | INFO  |       main | ry.DiscoveryClient$6:1297  | Saw local status change event StatusChangeEvent [timestamp=1747406064159, current=UP, previous=STARTING]
+2025-05-16 23:34:24.159 | INFO  | licator-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:34:24.180 | INFO  | licator-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:34:24.232 | INFO  |       main | netty.NettyWebServer:141   | Netty started on port 8000 (http)
+2025-05-16 23:34:24.233 | INFO  |       main | oServiceRegistration:150   | Updating port to 8000
+2025-05-16 23:34:24.251 | INFO  |       main | ot.StartupInfoLogger:56    | Started InjeApiGatewayApplication in 1.814 seconds (process running for 2.044)
+2025-05-16 23:34:54.156 | INFO  | xecutor-%d | very.DiscoveryClient:954   | Disable delta property : false
+2025-05-16 23:34:54.158 | INFO  | xecutor-%d | very.DiscoveryClient:955   | Single vip registry refresh property : null
+2025-05-16 23:34:54.158 | INFO  | xecutor-%d | very.DiscoveryClient:956   | Force full registry fetch : false
+2025-05-16 23:34:54.158 | INFO  | xecutor-%d | very.DiscoveryClient:957   | Application is null : false
+2025-05-16 23:34:54.158 | INFO  | xecutor-%d | very.DiscoveryClient:958   | Registered Applications size is zero : true
+2025-05-16 23:34:54.158 | INFO  | xecutor-%d | very.DiscoveryClient:960   | Application version is -1: true
+2025-05-16 23:34:54.158 | INFO  | xecutor-%d | very.DiscoveryClient:1042  | Getting all instance registry info from the eureka server
+2025-05-16 23:34:54.182 | INFO  | xecutor-%d | very.DiscoveryClient:849   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - Re-registering apps/INJE-API-GATEWAY
+2025-05-16 23:34:54.182 | INFO  | xecutor-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:34:54.183 | WARN  | xecutor-%d | ableEurekaHttpClient:128   | Request execution failure with status code 404; retrying on another server if available
+2025-05-16 23:34:54.183 | INFO  | xecutor-%d | very.DiscoveryClient:968   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-16 23:34:54.186 | INFO  | xecutor-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:35:00.682 | INFO  | http-nio-3 | .GlobalLoggingFilter:43    | Global Logging Filter baseMessage: Spring Cloud Gateway GlobalLoggingFilter
+2025-05-16 23:35:00.682 | INFO  | http-nio-3 | .GlobalLoggingFilter:45    | Global Logging Filter Start : request id -> e53b6d2a-1
+2025-05-16 23:35:00.682 | INFO  | http-nio-3 | .GlobalLoggingFilter:46    | Global Logging Filter Start : request uri -> http://localhost:8000/book-service/books/1
+2025-05-16 23:35:00.682 | INFO  | http-nio-3 | .GlobalLoggingFilter:47    | Global Logging Filter Start : request path -> /book-service/books/1
+2025-05-16 23:35:00.710 | WARN  | http-nio-3 | undRobinLoadBalancer:99    | No servers available for service: BOOK-SERVICE
+2025-05-16 23:35:05.456 | INFO  | http-nio-3 | .GlobalLoggingFilter:43    | Global Logging Filter baseMessage: Spring Cloud Gateway GlobalLoggingFilter
+2025-05-16 23:35:05.457 | INFO  | http-nio-3 | .GlobalLoggingFilter:45    | Global Logging Filter Start : request id -> e53b6d2a-2
+2025-05-16 23:35:05.458 | INFO  | http-nio-3 | .GlobalLoggingFilter:46    | Global Logging Filter Start : request uri -> http://localhost:8000/book-service/books/1
+2025-05-16 23:35:05.458 | INFO  | http-nio-3 | .GlobalLoggingFilter:47    | Global Logging Filter Start : request path -> /book-service/books/1
+2025-05-16 23:35:05.461 | WARN  | http-nio-3 | undRobinLoadBalancer:99    | No servers available for service: BOOK-SERVICE
+2025-05-16 23:35:11.308 | INFO  | http-nio-3 | .GlobalLoggingFilter:43    | Global Logging Filter baseMessage: Spring Cloud Gateway GlobalLoggingFilter
+2025-05-16 23:35:11.309 | INFO  | http-nio-3 | .GlobalLoggingFilter:45    | Global Logging Filter Start : request id -> e53b6d2a-3
+2025-05-16 23:35:11.309 | INFO  | http-nio-3 | .GlobalLoggingFilter:46    | Global Logging Filter Start : request uri -> http://localhost:8000/book-service/books/1
+2025-05-16 23:35:11.309 | INFO  | http-nio-3 | .GlobalLoggingFilter:47    | Global Logging Filter Start : request path -> /book-service/books/1
+2025-05-16 23:35:11.312 | WARN  | http-nio-3 | undRobinLoadBalancer:99    | No servers available for service: BOOK-SERVICE
+2025-05-16 23:35:24.181 | INFO  | licator-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:35:24.185 | INFO  | xecutor-%d | very.DiscoveryClient:954   | Disable delta property : false
+2025-05-16 23:35:24.185 | INFO  | xecutor-%d | very.DiscoveryClient:955   | Single vip registry refresh property : null
+2025-05-16 23:35:24.185 | INFO  | xecutor-%d | very.DiscoveryClient:956   | Force full registry fetch : false
+2025-05-16 23:35:24.185 | INFO  | xecutor-%d | very.DiscoveryClient:957   | Application is null : false
+2025-05-16 23:35:24.186 | INFO  | xecutor-%d | very.DiscoveryClient:958   | Registered Applications size is zero : true
+2025-05-16 23:35:24.186 | INFO  | xecutor-%d | very.DiscoveryClient:960   | Application version is -1: true
+2025-05-16 23:35:24.186 | INFO  | xecutor-%d | very.DiscoveryClient:1042  | Getting all instance registry info from the eureka server
+2025-05-16 23:35:24.187 | INFO  | licator-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:35:24.188 | INFO  | xecutor-%d | very.DiscoveryClient:849   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - Re-registering apps/INJE-API-GATEWAY
+2025-05-16 23:35:24.189 | INFO  | xecutor-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:35:24.191 | INFO  | xecutor-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:35:24.202 | WARN  | xecutor-%d | ableEurekaHttpClient:128   | Request execution failure with status code 404; retrying on another server if available
+2025-05-16 23:35:24.202 | INFO  | xecutor-%d | very.DiscoveryClient:968   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-16 23:35:54.183 | INFO  | licator-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:35:54.190 | INFO  | licator-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:35:54.193 | INFO  | xecutor-%d | very.DiscoveryClient:849   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - Re-registering apps/INJE-API-GATEWAY
+2025-05-16 23:35:54.194 | INFO  | xecutor-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:35:54.196 | INFO  | xecutor-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:35:54.198 | INFO  | xecutor-%d | very.DiscoveryClient:954   | Disable delta property : false
+2025-05-16 23:35:54.199 | INFO  | xecutor-%d | very.DiscoveryClient:955   | Single vip registry refresh property : null
+2025-05-16 23:35:54.199 | INFO  | xecutor-%d | very.DiscoveryClient:956   | Force full registry fetch : false
+2025-05-16 23:35:54.199 | INFO  | xecutor-%d | very.DiscoveryClient:957   | Application is null : false
+2025-05-16 23:35:54.199 | INFO  | xecutor-%d | very.DiscoveryClient:958   | Registered Applications size is zero : true
+2025-05-16 23:35:54.199 | INFO  | xecutor-%d | very.DiscoveryClient:960   | Application version is -1: true
+2025-05-16 23:35:54.199 | INFO  | xecutor-%d | very.DiscoveryClient:1042  | Getting all instance registry info from the eureka server
+2025-05-16 23:35:54.213 | WARN  | xecutor-%d | ableEurekaHttpClient:128   | Request execution failure with status code 404; retrying on another server if available
+2025-05-16 23:35:54.214 | INFO  | xecutor-%d | very.DiscoveryClient:968   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-16 23:36:24.193 | INFO  | licator-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:36:24.207 | INFO  | xecutor-%d | very.DiscoveryClient:849   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - Re-registering apps/INJE-API-GATEWAY
+2025-05-16 23:36:24.208 | INFO  | xecutor-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:36:24.207 | INFO  | licator-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:36:24.213 | INFO  | xecutor-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:36:24.215 | INFO  | xecutor-%d | very.DiscoveryClient:954   | Disable delta property : false
+2025-05-16 23:36:24.215 | INFO  | xecutor-%d | very.DiscoveryClient:955   | Single vip registry refresh property : null
+2025-05-16 23:36:24.215 | INFO  | xecutor-%d | very.DiscoveryClient:956   | Force full registry fetch : false
+2025-05-16 23:36:24.216 | INFO  | xecutor-%d | very.DiscoveryClient:957   | Application is null : false
+2025-05-16 23:36:24.216 | INFO  | xecutor-%d | very.DiscoveryClient:958   | Registered Applications size is zero : true
+2025-05-16 23:36:24.216 | INFO  | xecutor-%d | very.DiscoveryClient:960   | Application version is -1: true
+2025-05-16 23:36:24.216 | INFO  | xecutor-%d | very.DiscoveryClient:1042  | Getting all instance registry info from the eureka server
+2025-05-16 23:36:24.234 | WARN  | xecutor-%d | ableEurekaHttpClient:128   | Request execution failure with status code 404; retrying on another server if available
+2025-05-16 23:36:24.235 | INFO  | xecutor-%d | very.DiscoveryClient:968   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-16 23:36:54.214 | INFO  | licator-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:36:54.232 | INFO  | licator-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:36:54.232 | INFO  | xecutor-%d | very.DiscoveryClient:849   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - Re-registering apps/INJE-API-GATEWAY
+2025-05-16 23:36:54.233 | INFO  | xecutor-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:36:54.234 | INFO  | xecutor-%d | very.DiscoveryClient:954   | Disable delta property : false
+2025-05-16 23:36:54.234 | INFO  | xecutor-%d | very.DiscoveryClient:955   | Single vip registry refresh property : null
+2025-05-16 23:36:54.235 | INFO  | xecutor-%d | very.DiscoveryClient:956   | Force full registry fetch : false
+2025-05-16 23:36:54.235 | INFO  | xecutor-%d | very.DiscoveryClient:957   | Application is null : false
+2025-05-16 23:36:54.235 | INFO  | xecutor-%d | very.DiscoveryClient:958   | Registered Applications size is zero : true
+2025-05-16 23:36:54.235 | INFO  | xecutor-%d | very.DiscoveryClient:960   | Application version is -1: true
+2025-05-16 23:36:54.235 | INFO  | xecutor-%d | very.DiscoveryClient:1042  | Getting all instance registry info from the eureka server
+2025-05-16 23:36:54.236 | INFO  | xecutor-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:36:54.251 | WARN  | xecutor-%d | ableEurekaHttpClient:128   | Request execution failure with status code 404; retrying on another server if available
+2025-05-16 23:36:54.252 | INFO  | xecutor-%d | very.DiscoveryClient:968   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-16 23:37:24.234 | INFO  | licator-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:37:24.239 | INFO  | licator-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:37:24.243 | INFO  | xecutor-%d | very.DiscoveryClient:849   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - Re-registering apps/INJE-API-GATEWAY
+2025-05-16 23:37:24.243 | INFO  | xecutor-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:37:24.246 | INFO  | xecutor-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:37:24.252 | INFO  | xecutor-%d | very.DiscoveryClient:954   | Disable delta property : false
+2025-05-16 23:37:24.252 | INFO  | xecutor-%d | very.DiscoveryClient:955   | Single vip registry refresh property : null
+2025-05-16 23:37:24.252 | INFO  | xecutor-%d | very.DiscoveryClient:956   | Force full registry fetch : false
+2025-05-16 23:37:24.252 | INFO  | xecutor-%d | very.DiscoveryClient:957   | Application is null : false
+2025-05-16 23:37:24.252 | INFO  | xecutor-%d | very.DiscoveryClient:958   | Registered Applications size is zero : true
+2025-05-16 23:37:24.252 | INFO  | xecutor-%d | very.DiscoveryClient:960   | Application version is -1: true
+2025-05-16 23:37:24.253 | INFO  | xecutor-%d | very.DiscoveryClient:1042  | Getting all instance registry info from the eureka server
+2025-05-16 23:37:24.259 | WARN  | xecutor-%d | ableEurekaHttpClient:128   | Request execution failure with status code 404; retrying on another server if available
+2025-05-16 23:37:24.259 | INFO  | xecutor-%d | very.DiscoveryClient:968   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-16 23:37:54.243 | INFO  | licator-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:37:54.262 | INFO  | xecutor-%d | very.DiscoveryClient:849   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - Re-registering apps/INJE-API-GATEWAY
+2025-05-16 23:37:54.263 | INFO  | xecutor-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:37:54.262 | INFO  | licator-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:37:54.264 | INFO  | xecutor-%d | very.DiscoveryClient:954   | Disable delta property : false
+2025-05-16 23:37:54.265 | INFO  | xecutor-%d | very.DiscoveryClient:955   | Single vip registry refresh property : null
+2025-05-16 23:37:54.265 | INFO  | xecutor-%d | very.DiscoveryClient:956   | Force full registry fetch : false
+2025-05-16 23:37:54.265 | INFO  | xecutor-%d | very.DiscoveryClient:957   | Application is null : false
+2025-05-16 23:37:54.265 | INFO  | xecutor-%d | very.DiscoveryClient:958   | Registered Applications size is zero : true
+2025-05-16 23:37:54.265 | INFO  | xecutor-%d | very.DiscoveryClient:960   | Application version is -1: true
+2025-05-16 23:37:54.265 | INFO  | xecutor-%d | very.DiscoveryClient:1042  | Getting all instance registry info from the eureka server
+2025-05-16 23:37:54.269 | INFO  | xecutor-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:37:54.282 | WARN  | xecutor-%d | ableEurekaHttpClient:128   | Request execution failure with status code 404; retrying on another server if available
+2025-05-16 23:37:54.283 | INFO  | xecutor-%d | very.DiscoveryClient:968   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-16 23:38:24.264 | INFO  | licator-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:38:24.285 | INFO  | xecutor-%d | very.DiscoveryClient:954   | Disable delta property : false
+2025-05-16 23:38:24.285 | INFO  | xecutor-%d | very.DiscoveryClient:955   | Single vip registry refresh property : null
+2025-05-16 23:38:24.285 | INFO  | xecutor-%d | very.DiscoveryClient:956   | Force full registry fetch : false
+2025-05-16 23:38:24.285 | INFO  | xecutor-%d | very.DiscoveryClient:957   | Application is null : false
+2025-05-16 23:38:24.285 | INFO  | xecutor-%d | very.DiscoveryClient:958   | Registered Applications size is zero : true
+2025-05-16 23:38:24.285 | INFO  | xecutor-%d | very.DiscoveryClient:960   | Application version is -1: true
+2025-05-16 23:38:24.286 | INFO  | xecutor-%d | very.DiscoveryClient:1042  | Getting all instance registry info from the eureka server
+2025-05-16 23:38:24.292 | INFO  | licator-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:38:24.292 | INFO  | xecutor-%d | very.DiscoveryClient:849   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - Re-registering apps/INJE-API-GATEWAY
+2025-05-16 23:38:24.293 | INFO  | xecutor-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:38:24.300 | INFO  | xecutor-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:38:24.307 | WARN  | xecutor-%d | ableEurekaHttpClient:128   | Request execution failure with status code 404; retrying on another server if available
+2025-05-16 23:38:24.308 | INFO  | xecutor-%d | very.DiscoveryClient:968   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-16 23:38:54.295 | INFO  | licator-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:38:54.302 | INFO  | licator-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:38:54.306 | INFO  | xecutor-%d | very.DiscoveryClient:849   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - Re-registering apps/INJE-API-GATEWAY
+2025-05-16 23:38:54.306 | INFO  | xecutor-%d | very.DiscoveryClient:954   | Disable delta property : false
+2025-05-16 23:38:54.306 | INFO  | xecutor-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:38:54.306 | INFO  | xecutor-%d | very.DiscoveryClient:955   | Single vip registry refresh property : null
+2025-05-16 23:38:54.306 | INFO  | xecutor-%d | very.DiscoveryClient:956   | Force full registry fetch : false
+2025-05-16 23:38:54.306 | INFO  | xecutor-%d | very.DiscoveryClient:957   | Application is null : false
+2025-05-16 23:38:54.306 | INFO  | xecutor-%d | very.DiscoveryClient:958   | Registered Applications size is zero : true
+2025-05-16 23:38:54.307 | INFO  | xecutor-%d | very.DiscoveryClient:960   | Application version is -1: true
+2025-05-16 23:38:54.307 | INFO  | xecutor-%d | very.DiscoveryClient:1042  | Getting all instance registry info from the eureka server
+2025-05-16 23:38:54.308 | INFO  | xecutor-%d | very.DiscoveryClient:834   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration status: 404
+2025-05-16 23:38:54.320 | WARN  | xecutor-%d | ableEurekaHttpClient:128   | Request execution failure with status code 404; retrying on another server if available
+2025-05-16 23:38:54.320 | INFO  | xecutor-%d | very.DiscoveryClient:968   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-16 23:39:21.978 | INFO  | utdownHook | urekaServiceRegistry:91    | Unregistering application INJE-API-GATEWAY with eureka with status DOWN
+2025-05-16 23:39:21.978 | INFO  | utdownHook | ry.DiscoveryClient$6:1297  | Saw local status change event StatusChangeEvent [timestamp=1747406361978, current=DOWN, previous=UP]
+2025-05-16 23:39:21.979 | INFO  | licator-%d | very.DiscoveryClient:825   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000: registering service...
+2025-05-16 23:39:21.980 | INFO  | licator-%d | tingEurekaHttpClient:93    | Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on POST request for "http://localhost:8761/eureka/apps/INJE-API-GATEWAY": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/INJE-API-GATEWAY": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:830)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:691)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:83)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:554)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 21 more
+
+2025-05-16 23:39:21.981 | WARN  | licator-%d | ableEurekaHttpClient:130   | Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/INJE-API-GATEWAY": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2025-05-16 23:39:21.984 | INFO  | licator-%d | tingEurekaHttpClient:84    | Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/INJE-API-GATEWAY": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/INJE-API-GATEWAY": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:830)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:691)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:83)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:554)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 22 more
+
+2025-05-16 23:39:21.984 | WARN  | licator-%d | ableEurekaHttpClient:130   | Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/INJE-API-GATEWAY": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2025-05-16 23:39:21.984 | WARN  | licator-%d | very.DiscoveryClient:830   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-05-16 23:39:21.985 | WARN  | licator-%d | stanceInfoReplicator:129   | There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-05-16 23:39:23.904 | INFO  | xecutor-%d | onfigClusterResolver:43    | Resolving eureka endpoints via configuration
+2025-05-16 23:39:24.081 | INFO  | utdownHook | very.DiscoveryClient:887   | Shutting down DiscoveryClient ...
+2025-05-16 23:39:24.319 | INFO  | xecutor-%d | tingEurekaHttpClient:84    | Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on PUT request for "http://localhost:8761/eureka/apps/INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on PUT request for "http://localhost:8761/eureka/apps/INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:830)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:691)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.sendHeartBeat(RestTemplateEurekaHttpClient.java:115)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:554)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 20 more
+
+2025-05-16 23:39:24.319 | WARN  | xecutor-%d | ableEurekaHttpClient:130   | Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2025-05-16 23:39:24.319 | ERROR | xecutor-%d | very.DiscoveryClient:859   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - was unable to send heartbeat!
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:845)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1402)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-05-16 23:39:24.319 | INFO  | xecutor-%d | very.DiscoveryClient:954   | Disable delta property : false
+2025-05-16 23:39:24.319 | INFO  | xecutor-%d | very.DiscoveryClient:955   | Single vip registry refresh property : null
+2025-05-16 23:39:24.319 | INFO  | xecutor-%d | very.DiscoveryClient:956   | Force full registry fetch : false
+2025-05-16 23:39:24.319 | INFO  | xecutor-%d | very.DiscoveryClient:957   | Application is null : false
+2025-05-16 23:39:24.319 | INFO  | xecutor-%d | very.DiscoveryClient:958   | Registered Applications size is zero : true
+2025-05-16 23:39:24.319 | INFO  | xecutor-%d | very.DiscoveryClient:960   | Application version is -1: true
+2025-05-16 23:39:24.319 | INFO  | xecutor-%d | very.DiscoveryClient:1042  | Getting all instance registry info from the eureka server
+2025-05-16 23:39:24.325 | INFO  | xecutor-%d | tingEurekaHttpClient:84    | Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:830)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:691)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplicationsInternal(RestTemplateEurekaHttpClient.java:170)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.getApplications(RestTemplateEurekaHttpClient.java:158)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:554)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 23 more
+
+2025-05-16 23:39:24.325 | WARN  | xecutor-%d | ableEurekaHttpClient:130   | Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2025-05-16 23:39:24.325 | INFO  | xecutor-%d | very.DiscoveryClient:968   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
+	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1046)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:961)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1473)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1441)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+2025-05-16 23:39:27.087 | INFO  | utdownHook | very.DiscoveryClient:918   | Unregistering ...
+2025-05-16 23:39:27.097 | INFO  | utdownHook | tingEurekaHttpClient:84    | Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:830)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:691)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:96)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1200)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1195)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1156)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:155)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1102)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:554)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 40 more
+
+2025-05-16 23:39:27.097 | WARN  | utdownHook | ableEurekaHttpClient:130   | Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+2025-05-16 23:39:27.097 | ERROR | utdownHook | very.DiscoveryClient:922   | DiscoveryClient_INJE-API-GATEWAY/192.168.25.5:inje-api-gateway:8000 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1200)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1195)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1156)
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:155)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1102)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-05-16 23:39:27.098 | INFO  | utdownHook | very.DiscoveryClient:907   | Completed shut down of DiscoveryClient

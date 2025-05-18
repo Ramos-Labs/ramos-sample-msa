@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS authors;
+
+CREATE TABLE authors
+(
+    id   BIGINT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    bio  VARCHAR(2000)
+);

@@ -1,0 +1,141 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.10'
+    id 'io.spring.dependency-management' version '1.1.7'
+    id 'jacoco'
+    id 'maven-publish'
+}
+
+group = 'com.inje'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+// 빌드 환경 설정
+ext {
+    set('buildEnvironment', project.findProperty('profile') ?: 'dev')
+    set('springCloudVersion', '2023.0.5')
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    maven {
+        url 'https://nexus.cone-chain.com/repository/maven-default-group/'
+    }
+//    mavenCentral()
+}
+
+ext {
+    set('springCloudVersion', "2023.0.5")
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    runtimeOnly 'com.h2database:h2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+// 리소스 교체를 위한 설정
+sourceSets {
+    main {
+        resources {
+            srcDirs = ['src/main/resources', "src/main/resources-${buildEnvironment}"]
+        }
+    }
+}
+
+// 컴파일 인코딩 설정
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+// Jacoco 설정
+jacoco {
+    toolVersion = '0.8.10'
+}
+
+// https://docs.gradle.org/current/userguide/java_testing.html#using_junit5
+tasks.named('test') {
+    useJUnitPlatform()
+
+    testLogging {
+        events 'PASSED', 'FAILED', 'SKIPPED'
+    }
+
+    finalizedBy tasks.jacocoTestReport
+}
+
+tasks.named('jacocoTestReport') {
+    reports {
+        xml.required = true
+    }
+}
+
+// Maven Publish 설정
+// https://docs.gradle.org/current/userguide/publishing_maven.html
+publishing {
+    publications {
+        bootJava(MavenPublication) {
+            from components.java
+
+            versionMapping {
+                // API 용도로 의존하는 라이브러리는 runtimeClasspath 기준 버전 사용
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                // 런타임용 의존성은 resolve 결과 버전 사용
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
+            }
+        }
+    }
+
+    // https://docs.gradle.org/current/samples/sample_publishing_credentials.html
+    repositories {
+        maven {
+            name = 'deployment'
+            credentials(PasswordCredentials)
+
+            def releaseRepoUrl = "https://nexus.cone-chain.com/repository/maven-default-release/"
+            def snapshotRepoUrl = "https://nexus.cone-chain.com/repository/maven-default-snapshot/"
+            url = version.endsWith('SNAPSHOT') ? snapshotRepoUrl : releaseRepoUrl
+        }
+    }
+}
+
+tasks {
+    processResources {
+        duplicatesStrategy = org.gradle.api.file.DuplicatesStrategy.INCLUDE
+    }
+}
+task copyDependencies(type: Copy) {
+    from configurations.runtimeClasspath
+    into "$buildDir/dependencies"
+}
+build.dependsOn copyDependencies

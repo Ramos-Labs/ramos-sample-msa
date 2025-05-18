@@ -1,0 +1,148 @@
+server:
+  port: 9001
+  servlet:
+    context-path: /book-service
+
+spring:
+  application:
+    name: book-service
+
+  cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: true
+
+  datasource:
+    url: jdbc:h2:mem:bookdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties.hibernate:
+      format_sql: true
+      show_sql: true
+      use_sql_comment: true
+    open-in-view: false
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  sql:
+    init:
+      schema-locations: classpath*:db/schema.sql
+      data-locations: classpath*:db/data.sql
+
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      slidingWindowType: COUNT_BASED
+      # 최소 5번까진 무조건 CLOSE로 가정하고 호출.
+      # 일반적으로 slidingWindowSize와 같게 하며, 그보다 크면 의미가 없다.
+      minimumNumberOfCalls: 5
+      # minimumNumberOfCalls 이후로 5개의 요청을 기준으로 판단
+      slidingWindowSize: 5
+      # OPEN 상태에서 HALF_OPEN으로 가려면 얼마나 기다릴 것인지 설정
+      waitDurationInOpenState: 10s
+
+      # slidingWindowSize 중 몇 %가 recordException이면 OPEN으로 만들 것인지 설정
+      failureRateThreshold: 40
+
+      # 몇 ms 동안 요청이 처리되지 않으면 실패로 간주할 것인지 설정
+      slowCallDurationThreshold: 3000
+      # slidingWindowSize 중 몇 %가 slowCall이면 OPEN으로 만들지 설정
+      slowCallRateThreshold: 60
+
+      # HALF_OPEN 상태에서 5번까진 CLOSE로 가기위해 호출
+      permittedNumberOfCallsInHalfOpenState: 5
+      # OPEN 상태에서 자동으로 HALF_OPEN으로 갈 것인지 설정
+      automaticTransitionFromOpenToHalfOpenEnabled: true
+
+      # actuator를 위한 이벤트 버퍼 사이즈
+      eventConsumerBufferSize: 10
+      recordExceptions:
+        - feign.FeignException
+        - feign.RetryableException
+  instances:
+    default:
+      baseConfig: default
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+logging:
+  level:
+    com.inje.bookservice: debug
+    org:
+      hibernate:
+        orm:
+          jdbc:
+            bind: trace
+
+---
+spring:
+  config:
+    activate:
+      on-profile: loc
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://${EUREKA_HOSTNAME:${INJE_DISCOVERY_SERVER_SERVICE_HOST:localhost}}:${INJE_DISCOVERY_SERVER_SERVICE_PORT:8761}/discovery/eureka
+
+gateway:
+  url: localhost:8000
+internal:
+  author:
+    url: localhost:9002/author-service
+  review:
+    url: localhost:9003/review-service
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+eureka:
+  instance:
+    instance-id: book-service-svc.inje-msa-demo-dev.svc.cluster.local:9001
+    hostname: book-service-svc.inje-msa-demo-dev.svc.cluster.local
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://discovery-server-svc.inje-msa-demo-dev.svc.cluster.local:8761/discovery/eureka
+
+gateway:
+  url: https://dev-inje-msa-demo.cone-chain.com
+internal:
+  author:
+    url: http://author-service-svc.inje-msa-demo-dev.svc.cluster.local:9002/author-service
+  review:
+    url: http://review-service-svc.inje-msa-demo-dev.svc.cluster.local:9003/review-service
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prd
