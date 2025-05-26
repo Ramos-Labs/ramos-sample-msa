@@ -12,7 +12,7 @@
 - author: HakHyeon Song
 - 2025.04 ~ 2025.05
 
-![Image](https://github.com/user-attachments/assets/9e90836a-0ae2-4af8-901d-b835b1bb9dcf)
+![image](https://github.com/user-attachments/assets/c4f5adce-fbe5-48a4-839f-2e1ec44d68f3)
 
 ## Tech Stack
 - Java 17 / Spring Boot
